@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastor Dr. John Debo Adeyemi - Glory Impact Church</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../Glory Impact-01.png">
+    <style>
+        /* Pastor Page Specific Styles */
+        .pastor-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(DADCAROUSEL3.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .pastor-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .pastor-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .pastor-content {
+            background: white;
+            padding: 4rem 0;
+        }
+
+        .pastor-profile {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+            margin-bottom: 4rem;
+        }
+
+        .pastor-image {
+            text-align: center;
+        }
+
+        .pastor-photo {
+            width: 100%;
+            max-width: 400px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .pastor-photo:hover {
+            transform: scale(1.02);
+        }
+
+        .pastor-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a237e;
+            font-weight: 700;
+        }
+
+        .pastor-title {
+            color: #ff5722;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .pastor-bio {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .education-section {
+            background: #f8f9fa;
+            padding: 3rem 0;
+        }
+
+        .education-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1a237e;
+            text-align: center;
+        }
+
+        .education-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .education-list li {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #ff5722;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .books-section {
+            background: white;
+            padding: 4rem 0;
+        }
+
+        .books-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1a237e;
+            text-align: center;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 180px);
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .book-card {
+            height: 280px;
+            width: 180px;
+            background: white;
+            padding: 0;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .book-image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .book-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+        }
+
+        .book-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .pastor-hero h1 {
+                font-size: 2rem;
+            }
+
+            .pastor-hero p {
+                font-size: 1.1rem;
+            }
+
+
+            .pastor-profile {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .pastor-photo {
+                max-width: 300px;
+                height: 400px;
+            }
+
+            .pastor-info h2 {
+                font-size: 2rem;
+            }
+
+            .philosophy-content {
+                padding: 2rem;
+            }
+
+            .philosophy-content p {
+                font-size: 1.1rem;
+            }
+
+            .book-card {
+                height: 240px;
+                width: 150px;
+            }
+
+            .book-title {
+                font-size: 0.9rem;
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pastor-hero h1 {
+                font-size: 1.8rem;
+            }
+
+
+            .pastor-photo {
+                max-width: 250px;
+                height: 350px;
+            }
+
+            .pastor-info h2 {
+                font-size: 1.8rem;
+            }
+
+            .philosophy-content {
+                padding: 1.5rem;
+            }
+
+            .books-grid {
+                grid-template-columns: repeat(auto-fit, 120px);
+                gap: 1rem;
+            }
+
+            .book-card {
+                height: 200px;
+                width: 120px;
+            }
+
+            .book-title {
+                font-size: 0.8rem;
+                padding: 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../Glory Impact-01.png" alt="Glory Impact Church Logo" class="logo-img">
+                    <h2>Glory Impact Church</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../sermons.html" class="nav-link">Sermons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../offerings.html" class="nav-link">Offerings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Pastor Hero Section -->
+        <section class="pastor-hero">
+            <div class="container">
+                <h1>Pastor Dr. John Debo Adeyemi</h1>
+                <p>Senior Pastor & Founder</p>
+            </div>
+        </section>
+
+        <!-- Pastor Content -->
+        <section class="pastor-content">
+            <div class="container">
+
+
+                <div class="pastor-profile">
+                    <div class="pastor-image">
+                        <img src="dad.png" alt="Pastor Dr. John Debo Adeyemi" class="pastor-photo">
+                    </div>
+                    <div class="pastor-info">
+                        <h2>PASTOR JOHN ADEBOWALE ADEYEMI</h2>
+                        <p class="pastor-title">Senior Pastor & Founder of Glory Impact Apostolic Global Ministry</p>
+                        
+                        <div class="pastor-bio">
+                            <p>Pastor Dr. John Debo Adeyemi is an Apostolic, Prophetic Pastor and teacher with divine mandate to liberate the world from the grip of sin and hell and to release them into the fulfilment of their life and destiny.</p>
+                            
+                            <p>He has been in the ministry for about three decades now; he is the president of Rhema Global Impact and the senior Pastor of Glory Impact Apostolic Global Ministry. A prolific writer, renowned author and researcher. He speaks in conferences, seminars, workshops and other events with great life-changing unction. He currently resides in Ogun State with his lovely wife and glorious children.</p>
+                            
+                            <p>When confused Pastor John Debo will always seek and pray for the wisdom of God for direction. The mere taste of true godliness that he received set him on fire with such a desire to progress that he pursue the rest of his studies with coolness.</p>
+                            
+                            <p>Dr. John Debo uses his vitality and vigour to draw many closer to Jesus. He has allowed the Holy Spirit to become his best friend and greatest teacher, he has written bestselling books to give you the spiritual weaponry you need to fight – the good fight of faith.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education-section">
+            <div class="container">
+                <h3>Educational Background</h3>
+                <ul class="education-list">
+                    <li><strong>CAC Theological Seminary</strong> (An affiliate of University of Ibadan) - Ile-Ife</li>
+                    <li><strong>United Missionary Church of Africa Theological College</strong> - Ilorin (An affiliate of University of Ibadan)</li>
+                    <li><strong>Faith Theological Seminary</strong> (An affiliate of Central Christian University, Lexington, USA)</li>
+                    <li><strong>Doctorate Degree in Christian Education</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Books Section -->
+        <section class="books-section">
+            <div class="container">
+                <h3>Published Works</h3>
+                <div class="books-grid">
+                    <div class="book-card">
+                        <div class="book-image" style="background-image: url('book1.jpg');">
+                            <div class="book-title">THE MILITANT YOUTH</div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-image" style="background-image: url('book1.jpg');">
+                            <div class="book-title">THE WORDS OF MY MOUTH</div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-image" style="background-image: url('book1.jpg');">
+                            <div class="book-title">IMPACTING YOUR GENERATION</div>
+                        </div>
+                    </div>
+                
+                    <div class="book-card">
+                        <div class="book-image" style="background-image: url('book1.jpg');">
+                            <div class="book-title">PREACHER AND HIS PULPIT</div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-image" style="background-image: url(book1.jpg);">
+                            <div class="book-title">VICTORY OVER BLOODLINE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Glory Impact Church</h3>
+                    <p>Raising people of Impact who will impact their generation by maximising and releasing their ordained Glory.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4> </h4>
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>Palace avenue, Plot 15 Olowofela Rd, Magboro 121101, Ogun State</p>
+                    <p><i class="fas fa-phone"></i>08036663537</p>
+                    <p><i class="fas fa-envelope"></i>gloryimpactchurch@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Glory Impact Church. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

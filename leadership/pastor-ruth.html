@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastor Mrs. Ruth Eniola Adeyemi - Glory Impact Church</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../Glory Impact-01.png">
+    <style>
+        /* Pastor Page Specific Styles */
+        .pastor-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../Glory Impact-01.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .pastor-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .pastor-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .pastor-content {
+            background: white;
+            padding: 4rem 0;
+        }
+
+        .pastor-profile {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+            margin-bottom: 4rem;
+        }
+
+        .pastor-image {
+            text-align: center;
+        }
+
+        .pastor-photo {
+            width: 100%;
+            max-width: 400px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .pastor-photo:hover {
+            transform: scale(1.02);
+        }
+
+        .pastor-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a237e;
+            font-weight: 700;
+        }
+
+        .pastor-title {
+            color: #ff5722;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .pastor-bio {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .education-section {
+            background: #f8f9fa;
+            padding: 3rem 0;
+        }
+
+        .education-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1a237e;
+            text-align: center;
+        }
+
+        .education-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .education-list li {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #ff5722;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .ministry-section {
+            background: white;
+            padding: 4rem 0;
+        }
+
+        .ministry-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1a237e;
+            text-align: center;
+        }
+
+        .ministry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .ministry-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .ministry-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ministry-card i {
+            font-size: 3rem;
+            color: #ff5722;
+            margin-bottom: 1rem;
+        }
+
+        .ministry-card h4 {
+            font-size: 1.2rem;
+            color: #1a237e;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .ministry-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .personal-section {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .personal-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1a237e;
+            text-align: center;
+        }
+
+        .personal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-left: 5px solid #ff5722;
+        }
+
+        .personal-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .personal-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .back-button {
+            background: linear-gradient(135deg, #1a237e, #283593);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background: linear-gradient(135deg, #283593, #3949ab);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26, 35, 126, 0.4);
+        }
+
+        .back-button i {
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover i {
+            transform: translateX(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .pastor-hero h1 {
+                font-size: 2rem;
+            }
+
+            .pastor-hero p {
+                font-size: 1.1rem;
+            }
+
+            .pastor-profile {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .pastor-photo {
+                max-width: 300px;
+                height: 400px;
+            }
+
+            .pastor-info h2 {
+                font-size: 2rem;
+            }
+
+            .personal-content {
+                padding: 2rem;
+            }
+
+            .personal-content p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pastor-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .pastor-photo {
+                max-width: 250px;
+                height: 350px;
+            }
+
+            .pastor-info h2 {
+                font-size: 1.8rem;
+            }
+
+            .personal-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../Glory Impact-01.png" alt="Glory Impact Church Logo" class="logo-img">
+                    <h2>Glory Impact Church</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../sermons.html" class="nav-link">Sermons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../offerings.html" class="nav-link">Offerings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Pastor Hero Section -->
+        <section class="pastor-hero">
+            <div class="container">
+                <h1>Pastor Mrs. Ruth Eniola Adeyemi</h1>
+                <p>Co-Pastor & Family Life Director</p>
+            </div>
+        </section>
+
+        <!-- Pastor Content -->
+        <section class="pastor-content">
+            <div class="container">
+
+                <div class="pastor-profile">
+                    <div class="pastor-image">
+                        <img src="ruth.png" alt="Pastor Mrs. Ruth Eniola Adeyemi" class="pastor-photo">
+                    </div>
+                    <div class="pastor-info">
+                        <h2>PASTOR MRS. RUTH ENIOLA ADEYEMI</h2>
+                        <p class="pastor-title">Co-Pastor & Family Life Director of Glory Impact Apostolic Global Ministry</p>
+                        
+                        <div class="pastor-bio">
+                            <p>Pastor Mrs. Ruth Eniola Oluwabunmi Adeyemi is a born teacher with the passion to minister to families, most especially teaching and raising godly children for the glory of God. She is born in May 3rd, 1975.</p>
+                            
+                            <p>She lived part of her life in Kano State with her parents, where she schooled and obtain BSc. in Political Science at Bayero University (BUK) in 1998. She got married to Pastor John Debo in December 23rd, 2000. Pastor Eniola is civil servant with the Lagos State government at the State Universal Basic Education Board (SUBEB). But she is involved with the work of the ministry with her husband as a co-pastor in the ministry.</p>
+                            
+                            <p>She operates in the office of a prophetess and evangelist and her ministrations have brought a lot of blessing to the church and the kingdom of God.</p>
+                            
+                            <p>She organised a monthly programme tagged "VOICE OF MOTHERS" an intercessory prayer meeting for parents and children and she is in charge of the Family Life Directorate of the Ministry – overseeing and promoting godly family values and relationships.</p>
+                            
+                            <p>She loves singing and needle works. She resides in Lagos, Nigeria.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Glory Impact Church</h3>
+                    <p>Raising people of Impact who will impact their generation by maximising and releasing their ordained Glory.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>   </h4>
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li>   </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>Palace avenue, Plot 15 Olowofela Rd, Magboro 121101, Ogun State</p>
+                    <p><i class="fas fa-phone"></i>08036663537</p>
+                    <p><i class="fas fa-envelope"></i>gloryimpactchurch@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Glory Impact Church. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

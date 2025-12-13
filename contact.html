@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Glory Impact Church</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Glory Impact-01.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="Glory Impact-01.png" alt="Glory Impact Church Logo" class="logo-img">
+                    <h2>Glory Impact Church</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sermons.html" class="nav-link">Sermons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="offerings.html" class="nav-link">Offerings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+                <p>Get in touch with us for more information</p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <h2>Get in Touch</h2>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>Plot 15 Olowofela Rd, Diamond avenue,<br>Magboro 121101, Ogun State</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>08036663537,08037645424</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>gloryimpactchurch@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Office Hours</h3>
+                                <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+                                Saturday: 10:00 AM - 2:00 PM<br>
+                                Sunday: 8:00 AM - 12:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Send us a Message</h2>
+                        <form class="contact-form" id="contactForm" action="https://formspree.io/f/meolbneq" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="visit">Planning a Visit</option>
+                                    <option value="prayer">Prayer Request</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Please share your message with us..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="map-section">
+            <div class="container">
+                <h2>Find Us</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Our Location</h3>
+                        <p>Palace avenue, Plot 15 Olowofela Rd, Magboro 121101, Ogun State</p>
+                        <a href="https://www.google.com/maps/place/Glory+Impact+Church/@6.7208753,3.393244,14z/data=!4m10!1m2!2m1!1sDiamond+avenue+Plot+15+Olowofela+Rd+Magboro+121101+Ogun+State!3m6!1s0x103beb6a4016331b:0xcc8ad8a3e5e70f5f!8m2!3d6.7153478!4d3.4279364!15sCj1EaWFtb25kIGF2ZW51ZSBQbG90IDE1IE9sb3dvZmVsYSBSZCBNYWdib3JvIDEyMTEwMSBPZ3VuIFN0YXRlkgEGY2h1cmNoqgF6EAEqEiIOZGlhbW9uZCBhdmVudWUoADIfEAEiG3OM4RFfODdWW21cu1INDnGK3p4y5P-fRThc4DJBEAIiPWRpYW1vbmQgYXZlbnVlIHBsb3QgMTUgb2xvd29mZWxhIHJkIG1hZ2Jvcm8gMTIxMTAxIG9ndW4gc3RhdGXgAQA!16s%2Fg%2F11rr__bv63?entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-primary">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Glory Impact Church. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    
+    <script>
+        // Handle form submission with Formspree
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // Show loading state
+            const submitBtn = document.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Remove existing messages
+            const existingMessage = document.querySelector('.form-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+        });
+        
+        // Handle form response (success/error)
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === 'true') {
+                showMessage('Message sent successfully! We\'ll get back to you soon.', 'success');
+            } else if (urlParams.get('success') === 'false') {
+                showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
+            }
+        });
+        
+        // Show success/error messages
+        function showMessage(message, type) {
+            // Remove existing messages
+            const existingMessage = document.querySelector('.form-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+            
+            // Create new message
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `form-message ${type}`;
+            messageDiv.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            // Insert after form
+            const form = document.getElementById('contactForm');
+            form.parentNode.insertBefore(messageDiv, form.nextSibling);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (messageDiv.parentNode) {
+                    messageDiv.remove();
+                }
+            }, 5000);
+        }
+    </script>
+    
+    <style>
+        .form-message {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .form-message i {
+            font-size: 1.2rem;
+        }
+    </style>
+</body>
+</html>

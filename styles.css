@@ -1,0 +1,1820 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+.navbar {
+    background: linear-gradient(135deg, #1a237e, #283593);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-container .logo-img {
+    height: 50px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+.nav-container .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    margin-right: 1rem;
+}
+.logo h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ff5722;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bar {
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    margin: 2px 0;
+    transition: 0.3s;
+}
+
+/* Main Content */
+main {
+    margin-top: 70px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('photo_2025-09-11_09-21-13.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff5722, #d84315);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #d84315, #bf360c);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #333;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #1a237e, #283593);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+}
+
+.welcome {
+    background: white;
+    text-align: center;
+}
+
+.welcome h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a237e;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #ff5722;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a237e;
+}
+
+/* About Us Styles */
+.our-history {
+    background: white;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    font-size: large;
+}
+
+.history-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a237e;
+}
+
+.history-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ff5722;
+    font-weight: 600;
+}
+
+.history-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.history-image {
+    text-align: center;
+}
+
+.history-photo {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.mission {
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a237e;
+}
+
+.mission-statement {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #ff5722;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card i {
+    font-size: 3rem;
+    color: #ff9800;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a237e;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.leader-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.leader-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+
+.leader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.leader-image {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+}
+
+.leader-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.leader-card:hover .leader-photo {
+    transform: scale(1.05);
+}
+
+.leader-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    margin: 0;
+}
+
+.leader-title {
+    color: #ff9800;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    padding: 0 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.leader-card p {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #666;
+    padding: 0 1.5rem;
+    margin-top: 0;
+}
+
+.read-more {
+    background: linear-gradient(135deg, #ff5722, #ff9800);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.read-more i {
+    transition: transform 0.3s ease;
+}
+
+.leader-card:hover .read-more {
+    background: linear-gradient(135deg, #d84315, #f57c00);
+    transform: translateY(-2px);
+}
+
+.leader-card:hover .read-more i {
+    transform: translateX(5px);
+}
+
+/* Sermons Styles */
+.featured-sermon {
+    background: white;
+}
+
+.featured-video {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.video-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1a237e;
+}
+
+.sermon-date {
+    color: #ff5722;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.sermon-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.sermons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.sermon-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.sermon-card:hover {
+    transform: translateY(-5px);
+}
+
+.sermon-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.sermon-thumbnail iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.sermon-content {
+    padding: 1.5rem;
+}
+
+.sermon-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.youtube-channel {
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.youtube-channel h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a237e;
+}
+
+.youtube-channel .btn {
+    margin-top: 1rem;
+}
+
+.youtube-channel .btn i {
+    margin-right: 0.5rem;
+}
+
+/* Offerings Styles */
+.giving-message {
+    background: white;
+    text-align: center;
+}
+
+.scripture {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #1a237e;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 5px solid #ff5722;
+}
+
+.giving-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.giving-method {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    width: fit-content;
+}
+
+.giving-method:hover {
+    transform: translateY(-5px);
+}
+
+.giving-method i {
+    font-size: 3rem;
+    color: #ff9800;
+    margin-bottom: 1rem;
+}
+
+.giving-method h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a237e;
+}
+
+.bank-logo{
+    width: 50px;
+    height: 50px;
+}
+.method-details {
+
+    text-align: left;
+}
+
+.method-details p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.category-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card i {
+    font-size: 3rem;
+    color: #ff5722;
+    margin-bottom: 1rem;
+}
+
+.category-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #1a237e;
+}
+
+.category-percentage {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #ff5722;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.special-offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.special-offering {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.special-offering h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a237e;
+}
+
+.progress-bar {
+    background: #e9ecef;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.progress {
+    background: linear-gradient(135deg, #ff5722, #ff9800);
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    text-align: center;
+    font-weight: 600;
+    color: #666;
+}
+
+.guidelines-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.guideline {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.guideline i {
+    font-size: 3rem;
+    color: #ff9800;
+    margin-bottom: 1rem;
+}
+
+.guideline h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #1a237e;
+}
+
+/* Contact Styles */
+.contact-info {
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.contact-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a237e;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #ff5722;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1a237e;
+}
+
+.contact-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-form-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a237e;
+}
+
+.contact-form {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1a237e;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff5722;
+}
+
+.church-staff {
+    background: #f8f9fa;
+}
+
+.church-staff h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a237e;
+    text-align: center;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.staff-member {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.staff-member:hover {
+    transform: translateY(-5px);
+}
+
+.staff-image i {
+    font-size: 4rem;
+    color: #ff5722;
+    margin-bottom: 1rem;
+}
+
+.staff-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #1a237e;
+}
+
+.staff-title {
+    color: #ff9800;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.staff-email,
+.staff-phone {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.map-section {
+    background: white;
+}
+
+.map-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a237e;
+    text-align: center;
+}
+
+.map-container {
+    margin-top: 2rem;
+    position: relative;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e9ecef;
+}
+
+.map-info {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.map-info p {
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.map-info i {
+    color: #ff5722;
+    margin-right: 0.5rem;
+}
+
+.map-fallback {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    padding: 4rem;
+    text-align: center;
+    border-radius: 10px;
+    color: #6c757d;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-fallback i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #ff5722;
+}
+
+.map-fallback h3 {
+    color: #1a237e;
+    margin-bottom: 1rem;
+}
+
+.map-placeholder {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    padding: 4rem;
+    text-align: center;
+    border-radius: 10px;
+    color: #6c757d;
+}
+
+.map-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #ff5722;
+}
+
+.emergency-contact {
+    background: #ff5722;
+    color: white;
+    text-align: center;
+}
+
+.emergency-contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.emergency-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+}
+
+.emergency-info i {
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.emergency-number {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.emergency-note {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Contact Section */
+.contact-section {
+    background: #1a237e;
+    color: white;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    background: #1a237e;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: #ff5722;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ff5722;
+}
+
+.footer-section p {
+    color: #bdc3c7;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section i {
+    margin-right: 0.5rem;
+    color: #ff5722;
+}
+
+.footer-bottom {
+    border-top: 1px solid #283593;
+    padding-top: 1rem;
+    text-align: center;
+    color: #bdc3c7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #1a237e;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 2rem 0;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    .nav-link {
+        padding: 1rem 2rem;
+        display: block;
+        width: 100%;
+    }
+
+    /* Hero Section Mobile */
+    .hero {
+        height: 50vh;
+        background-attachment: scroll;
+        padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* Grid Layouts Mobile */
+    .services-grid,
+    .values-grid,
+    .leadership-grid,
+    .sermons-grid,
+    .giving-methods,
+    .categories-grid,
+    .special-offerings-grid,
+    .guidelines-content,
+    .staff-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* About Section Mobile */
+    .history-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .history-text h2 {
+        font-size: 2rem;
+    }
+
+    .history-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .history-photo {
+        max-width: 300px;
+        height: 400px;
+    }
+
+    /* Sermons Mobile */
+    .featured-video {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .video-container {
+        padding-bottom: 56.25%;
+    }
+
+    /* Contact Mobile */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .contact-form-container h2,
+    .contact-details h2 {
+        font-size: 2rem;
+    }
+
+    /* Offerings Mobile */
+    .giving-method {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Page Headers */
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .welcome h2,
+    .mission h2 {
+        font-size: 2rem;
+    }
+
+    /* Emergency Contact */
+    .emergency-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .emergency-number {
+        font-size: 1.5rem;
+    }
+
+    /* Sections Padding */
+    section {
+        padding: 3rem 0;
+    }
+
+    /* Footer Mobile */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Navigation Mobile */
+    .nav-container {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .nav-container .logo h2 {
+        font-size: 1.2rem;
+    }
+
+    .nav-container .logo-img {
+        height: 35px;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    .nav-menu {
+        top: 60px;
+    }
+
+    /* Hero Section Small Mobile */
+    .hero {
+        height: 45vh;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-buttons {
+        gap: 0.8rem;
+    }
+
+    /* Buttons Small Mobile */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* Grid Layouts Small Mobile */
+    .services-grid,
+    .values-grid,
+    .leadership-grid,
+    .sermons-grid,
+    .giving-methods,
+    .categories-grid,
+    .special-offerings-grid,
+    .guidelines-content,
+    .staff-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Cards Small Mobile */
+    .service-card,
+    .value-card,
+    .leader-card,
+    .sermon-card,
+    .giving-method,
+    .category-card,
+    .special-offering,
+    .guideline,
+    .staff-member {
+        padding: 1.5rem;
+    }
+
+    /* Typography Small Mobile */
+    .welcome h2,
+    .mission h2,
+    .contact-form-container h2,
+    .contact-details h2,
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .history-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .history-text h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Leader Cards Small Mobile */
+    .leader-image {
+        height: 300px;
+    }
+
+    .leader-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .leader-title {
+        font-size: 0.9rem;
+    }
+
+    /* Contact Form Small Mobile */
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    /* Sermon Cards Small Mobile */
+    .sermon-thumbnail {
+        height: 150px;
+    }
+
+    .sermon-content {
+        padding: 1rem;
+    }
+
+    .sermon-content h3 {
+        font-size: 1.1rem;
+    }
+
+    /* About Section Small Mobile */
+    .history-photo {
+        max-width: 250px;
+        height: 350px;
+    }
+
+    /* Sections Padding Small Mobile */
+    section {
+        padding: 2rem 0;
+    }
+
+    /* Mission Statement Small Mobile */
+    .mission-statement {
+        font-size: 1.1rem;
+        padding: 1.5rem;
+    }
+
+    /* Footer Small Mobile */
+    .footer-content {
+        gap: 1.5rem;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.2rem;
+    }
+
+    /* Map Section Small Mobile */
+    .map-placeholder {
+        padding: 2rem 1rem;
+    }
+
+    .map-placeholder i {
+        font-size: 3rem;
+    }
+
+    .map-placeholder h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Emergency Contact Small Mobile */
+    .emergency-number {
+        font-size: 1.3rem;
+    }
+
+    .emergency-info {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animation for form submission */
+.form-submitted {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 768px) {
+    .nav-container .logo h2 {
+        font-size: 1.4rem;
+    }
+    
+    .nav-container .logo-img {
+        height: 40px;
+    }
+
+    /* Improve touch targets */
+    .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Better mobile spacing */
+    .service-card,
+    .value-card,
+    .leader-card,
+    .sermon-card {
+        margin-bottom: 1rem;
+    }
+
+    /* Mobile-friendly buttons */
+    .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Better mobile text sizes */
+    .service-card h3,
+    .value-card h3,
+    .sermon-content h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Mobile-friendly icons */
+    .service-card i,
+    .value-card i {
+        font-size: 2.5rem;
+    }
+
+    /* Improve mobile readability */
+    .leader-card p,
+    .sermon-description,
+    .mission-statement {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Keep navigation horizontal on very small screens */
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0 15px;
+    }
+    
+    .nav-container .logo {
+        flex-direction: row;
+        gap: 0.5rem;
+        margin-bottom: 0;
+    }
+    
+    .nav-container .logo h2 {
+        font-size: 1.2rem;
+    }
+    
+    .nav-container .logo-img {
+        height: 35px;
+    }
+
+    /* Even better touch targets for small screens */
+    .nav-link {
+        min-height: 48px;
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        min-height: 48px;
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Compact mobile layout */
+    .service-card,
+    .value-card,
+    .leader-card,
+    .sermon-card {
+        padding: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Smaller icons for very small screens */
+    .service-card i,
+    .value-card i {
+        font-size: 2rem;
+    }
+
+    /* Better mobile typography */
+    .service-card h3,
+    .value-card h3,
+    .sermon-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Compact text for mobile */
+    .leader-card p,
+    .sermon-description,
+    .mission-statement {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+/* History Timeline Styles */
+.history-timeline {
+    background: #f8f9fa;
+    padding: 4rem 0;
+}
+
+.history-timeline h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a237e;
+    text-align: center;
+}
+
+.timeline-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-card:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.timeline-card:hover .timeline-image img {
+    transform: scale(1.05);
+}
+
+.timeline-content {
+    padding: 2rem;
+}
+
+.timeline-date {
+    background: linear-gradient(135deg, #ff5722, #ff9800);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.timeline-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1a237e;
+    font-weight: 700;
+}
+
+.timeline-content p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.scripture-quote {
+    background: #f8f9fa;
+    border-left: 4px solid #ff5722;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.scripture-quote p {
+    margin: 0;
+    font-style: italic;
+    color: #1a237e;
+    font-weight: 500;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+    .timeline-image {
+        height: 200px;
+    }
+    
+    .timeline-content {
+        padding: 1.5rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .timeline-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #ff5722;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+    /* Optimize animations for mobile */
+    .service-card:hover,
+    .value-card:hover,
+    .leader-card:hover,
+    .sermon-card:hover,
+    .category-card:hover,
+    .special-offering:hover,
+    .guideline:hover,
+    .staff-member:hover {
+        transform: none; /* Disable hover animations on mobile */
+    }
+
+    /* Improve mobile scrolling */
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Better mobile font rendering */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+
+    /* Optimize images for mobile */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Better mobile form handling */
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        transform: none; /* Prevent zoom on focus */
+    }
+
+    /* Mobile-friendly transitions */
+    .nav-link,
+    .btn,
+    .service-card,
+    .value-card,
+    .leader-card {
+        transition: all 0.2s ease;
+    }
+
+    /* Better mobile spacing for readability */
+    .contact-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-item i {
+        margin-top: 0.3rem;
+    }
+
+    /* Improve mobile video responsiveness */
+    .video-container iframe {
+        border-radius: 8px;
+    }
+
+    /* Better mobile leader card layout */
+    .leader-card {
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .leader-image {
+        border-radius: 15px 15px 0 0;
+    }
+
+    /* Mobile-friendly sermon cards */
+    .sermon-thumbnail iframe {
+        border-radius: 8px 8px 0 0;
+    }
+
+    /* Better mobile contact form */
+    .contact-form {
+        border-radius: 8px;
+    }
+
+    /* Mobile-friendly map placeholder */
+    .map-placeholder {
+        border-radius: 8px;
+    }
+}
+
+/* Very Small Mobile Screens (320px and below) */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 8px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        min-height: 44px;
+    }
+
+    .nav-container .logo h2 {
+        font-size: 1.1rem;
+    }
+
+    .nav-container .logo-img {
+        height: 30px;
+    }
+
+    .service-card,
+    .value-card,
+    .leader-card,
+    .sermon-card {
+        padding: 1rem;
+    }
+
+    .service-card h3,
+    .value-card h3,
+    .sermon-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .welcome h2,
+    .mission h2,
+    .contact-form-container h2,
+    .contact-details h2 {
+        font-size: 1.6rem;
+    }
+}

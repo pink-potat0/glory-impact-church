@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermons - Glory Impact Church</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Glory Impact-01.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="Glory Impact-01.png" alt="Glory Impact Church Logo" class="logo-img">
+                    <h2>Glory Impact Church</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sermons.html" class="nav-link active">Sermons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="offerings.html" class="nav-link">Offerings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Our Sermons</h1>
+                <p>Experience the power of God's word through our inspiring messages</p>
+            </div>
+        </section>
+
+        <!-- Featured Sermon -->
+        <section class="featured-sermon">
+            <div class="container">
+                <h2>Previous sunday service</h2>
+                <div class="featured-video" id="featured-video">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Sermons -->
+        <section class="recent-sermons">
+            <div class="container">
+                <h2>PRAISE FEST</h2>
+                <div class="sermons-grid" id="sermons-grid">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- YouTube Channel -->
+        <section class="youtube-channel">
+            <div class="container">
+                <h2>Subscribe to Our Channel</h2>
+                <p>Stay connected with our latest messages and be blessed by the word of God</p>
+                <a href="https://www.youtube.com/channel/UCtqbH4o05tYm580pNw76uEQ" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                    Subscribe on YouTube
+                </a>
+            </div>
+        </section>
+
+        <!-- Service Times -->
+        <section class="service-times">
+            <div class="container">
+                <h2>Join Us Live</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-church"></i>
+                        <h3>Glorious Sunday Service</h3>
+                        <p>Every Sunday at 8:00 AM</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-hands-praying"></i>
+                        <h3>Dew of Mercy</h3>
+                        <p>Every Monday & Saturday at 6:00 AM</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                        <h3>Miracle Service</h3>
+                        <p>Every Friday at 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Glory Impact Church</h3>
+                    <p>Raising people of Impact who will impact their generation by maximising and releasing their ordained Glory.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4> </h4>
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>Palace avenue, Plot 15 Olowofela Rd, Magboro 121101, Ogun State</p>
+                    <p><i class="fas fa-phone"></i>08036663537</p>
+                    <p><i class="fas fa-envelope"></i>gloryimpactchurch@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Glory Impact Church. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load video data and render videos
+        async function loadVideos() {
+            try {
+                const response = await fetch('video-data.json');
+                const data = await response.json();
+                
+                // Render featured video
+                renderFeaturedVideo(data.featuredSermon);
+                
+                // Render recent sermons
+                renderRecentSermons(data.recentSermons);
+            } catch (error) {
+                console.error('Error loading videos:', error);
+                // Fallback content if JSON fails to load
+                document.getElementById('featured-video').innerHTML = '<p>Unable to load videos. Please check your connection.</p>';
+            }
+        }
+        
+        function renderFeaturedVideo(sermon) {
+            const container = document.getElementById('featured-video');
+            container.innerHTML = `
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/${sermon.videoId}" 
+                            title="Featured Sermon" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>${sermon.title}</h3>
+                    <p class="sermon-date">${sermon.date}</p>
+                    <p class="sermon-description">${sermon.description}</p>
+                    <a href="https://www.youtube.com/watch?v=${sermon.videoId}" target="_blank" class="btn btn-primary">Watch on YouTube</a>
+                </div>
+            `;
+        }
+        
+        function renderRecentSermons(sermons) {
+            const container = document.getElementById('sermons-grid');
+            container.innerHTML = sermons.map(sermon => `
+                <div class="sermon-card">
+                    <div class="sermon-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/${sermon.videoId}" 
+                                title="${sermon.title}" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="sermon-content">
+                        <h3>${sermon.title}</h3>
+                        <p class="sermon-date">${sermon.date}</p>
+                        <a href="https://www.youtube.com/watch?v=${sermon.videoId}" target="_blank" class="btn btn-primary">Watch on YouTube</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Load videos when page loads
+        document.addEventListener('DOMContentLoaded', loadVideos);
+    </script>
+</html>
+
